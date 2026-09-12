@@ -1,4 +1,4 @@
-import { PluginAPI } from "tailwindcss/types/config";
+import type { PluginAPI } from "./types";
 
 export const spread = (p: PluginAPI) => {
   const { matchUtilities } = p;
@@ -16,7 +16,7 @@ export const spread = (p: PluginAPI) => {
     },
     {
       values: spreadValues,
-    }
+    },
   );
 
   matchUtilities(
@@ -30,7 +30,7 @@ export const spread = (p: PluginAPI) => {
     },
     {
       values: spreadValues,
-    }
+    },
   );
 
   matchUtilities(
@@ -44,7 +44,7 @@ export const spread = (p: PluginAPI) => {
     },
     {
       values: spreadValues,
-    }
+    },
   );
 
   matchUtilities(
@@ -57,7 +57,7 @@ export const spread = (p: PluginAPI) => {
     },
     {
       values: spreadValues,
-    }
+    },
   );
 
   matchUtilities(
@@ -70,7 +70,7 @@ export const spread = (p: PluginAPI) => {
     },
     {
       values: spreadValues,
-    }
+    },
   );
 
   matchUtilities(
@@ -83,7 +83,7 @@ export const spread = (p: PluginAPI) => {
     },
     {
       values: spreadValues,
-    }
+    },
   );
 
   matchUtilities(
@@ -96,7 +96,7 @@ export const spread = (p: PluginAPI) => {
     },
     {
       values: spreadValues,
-    }
+    },
   );
 };
 

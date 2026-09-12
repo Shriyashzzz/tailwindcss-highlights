@@ -1,3 +1,5 @@
+import type { PluginAPI } from "./types";
+
 export const defaultColors = {
   "--tw-highlight-color": "black",
 };
@@ -15,7 +17,7 @@ const flattenColorPalette = (colors: Record<string, any>) => {
   );
 };
 
-export const color = (p: any) => {
+export const color = (p: PluginAPI) => {
   const { matchUtilities, theme } = p;
 
   matchUtilities(
