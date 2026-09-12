@@ -1,8 +1,10 @@
 # tailwindcss-highlights - A plugin for tailwindcss
 
-> **Note:** This is a fork of [jln13x/tailwindcss-highlights](https://github.com/jln13x/tailwindcss-highlights) by Julian Hubatsch, updated to add Tailwind CSS v4 support. All credit for the original plugin design and implementation goes to the original author — this fork just patches it to keep working on v4.
+> **Note:** This is a fork of [jln13x/tailwindcss-highlights](https://github.com/jln13x/tailwindcss-highlights) by Julian Hubatsch, updated to add Tailwind CSS v4 support. All credit for the original plugin design and implementation goes to the original author, this fork just patches it to keep working on v4.
 
 See it in Action 👉 [Preview](https://tailwindcss-highlights.hubatsch.dev/) or [Playground](https://play.tailwindcss.com/hM0gHS3erl)
+
+> ⚠️ The Preview and Playground links above are the original author's demos, which use the original `tailwindcss-highlights` package (Tailwind v3 only). Do not install from what those pages show, -for Tailwind v4, install `tailwindcss-highlights-v4` as described below.
 
 This plugin adds utility classes to easily add highlights to your texts.
 
@@ -10,23 +12,11 @@ This plugin adds utility classes to easily add highlights to your texts.
 
 To install the package, run
 
-    npm install -D tailwindcss-highlights
-
-### Tailwind CSS v3
-
-Add the plugin to the `tailwind.config.js` file in:
-
-```javascript
-module.exports = {
-  plugins: [
-    require('tailwindcss-highlights')),
-  ]
-}
-```
+    npm install -D tailwindcss-highlights-v4
 
 ### Tailwind CSS v4
 
-Tailwind v4 no longer reads `tailwind.config.js` automatically, so plugins are loaded from your CSS entry file instead. Add this alongside your existing `@import "tailwindcss";`:
+In v4 plugins are loaded from your CSS entry file instead. Add this alongside your existing `@import "tailwindcss";`:
 
 ```css
 @import "tailwindcss";
@@ -38,6 +28,20 @@ If you're still using a legacy `tailwind.config.js` for other settings, you can 
 ```css
 @config "./tailwind.config.js";
 @import "tailwindcss";
+```
+
+### Tailwind CSS v3
+
+This package is backward compatible, meaning if you'd like to use this package for tailwind v3, you can still do so.
+
+Add the plugin to the `tailwind.config.js` file in:
+
+```javascript
+module.exports = {
+  plugins: [
+    require('tailwindcss-highlights-v4')),
+  ]
+}
 ```
 
 ## Usage
