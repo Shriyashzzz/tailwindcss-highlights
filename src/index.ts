@@ -31,7 +31,7 @@ export = plugin((p) => {
 
 const defaultStyles = {
   "--tw-highlight-z-index": "-1",
-  content: "var(--tw-content)",
+  content: "''",
   position: "absolute",
   zIndex: "var(--tw-highlight-z-index)",
 };
