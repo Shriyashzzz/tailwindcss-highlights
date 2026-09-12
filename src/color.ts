@@ -1,25 +1,31 @@
 import { PluginAPI } from "tailwindcss/types/config";
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+
+export const defaultColors = {
+  "--tw-highlight-color": "black",
+};
+
+const flattenColorPalette = (colors: Record<string, any>) => {
+  return Object.assign(
+    {},
+    ...Object.entries(colors ?? {}).flatMap(([colorName, colorValue]) =>
+      typeof colorValue === "object"
+        ? Object.entries(colorValue).map(([key, val]) => ({
+            [key === "DEFAULT" ? colorName : `${colorName}-${key}`]: val,
+          }))
+        : [{ [colorName]: colorValue }],
+    ),
+  );
+};
 
 export const color = (p: PluginAPI) => {
   const { matchUtilities, theme } = p;
 
   matchUtilities(
     {
-      highlight: (v) => {
-        return {
-          "--tw-highlight-color": `${v}`,
-        };
-      },
+      highlight: (v) => ({ "--tw-highlight-color": `${v}` }),
     },
-    {
-      values: flattenColorPalette(theme("colors")),
-    }
+    { values: flattenColorPalette(theme("colors")) },
   );
-};
-
-export const defaultColors = {
-  "--tw-highlight-color": "black",
 };
 
 export const colorStyles = {

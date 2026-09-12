@@ -16,12 +16,16 @@ export const variant = (p: PluginAPI) => {
     },
     {
       values: getVariantValues(20),
-    }
+    },
   );
 };
 
+type Variants = {
+  [key: number]: String;
+};
+
 const getVariantValues = (amount: number) => {
-  const variants = {};
+  const variants: Variants = {};
   for (let i = 1; i <= amount; i++) {
     variants[i] = `url(${highlightsUrl}/${i}.svg)`;
   }
@@ -30,7 +34,7 @@ const getVariantValues = (amount: number) => {
 
 export const defaultVariant = {
   "--tw-highlight-color": "black",
-  "--tw-highlight-variant": `url(${highlightsUrl}/1.svg)`
+  "--tw-highlight-variant": `url(${highlightsUrl}/1.svg)`,
 };
 
 export const variantStyles = {
