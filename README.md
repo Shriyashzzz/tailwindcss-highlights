@@ -1,5 +1,7 @@
 # tailwindcss-highlights - A plugin for tailwindcss
 
+> **Note:** This is a fork of [jln13x/tailwindcss-highlights](https://github.com/jln13x/tailwindcss-highlights) by Julian Hubatsch, updated to add Tailwind CSS v4 support. All credit for the original plugin design and implementation goes to the original author — this fork just patches it to keep working on v4.
+
 See it in Action 👉 [Preview](https://tailwindcss-highlights.hubatsch.dev/) or [Playground](https://play.tailwindcss.com/hM0gHS3erl)
 
 This plugin adds utility classes to easily add highlights to your texts.
@@ -135,3 +137,5 @@ This plugin adds the highlight as `::after`-pseudo element so its possible to ad
 ```
 
 Note: The owner of this repository is not with associated with the company Tailwind Labs Inc. This is just a plugin for [tailwindcss](https://tailwindcss.com/)
+
+This is an unofficial fork maintained independently of the original author, [jln13x](https://github.com/jln13x). If you're not specifically here for Tailwind v4 support, check out [the original repo](https://github.com/jln13x/tailwindcss-highlights) instead.
