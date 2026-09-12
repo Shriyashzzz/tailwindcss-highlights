@@ -1,5 +1,3 @@
-import { PluginAPI } from "tailwindcss/types/config";
-
 export const defaultColors = {
   "--tw-highlight-color": "black",
 };
@@ -17,7 +15,7 @@ const flattenColorPalette = (colors: Record<string, any>) => {
   );
 };
 
-export const color = (p: PluginAPI) => {
+export const color = (p: any) => {
   const { matchUtilities, theme } = p;
 
   matchUtilities(
