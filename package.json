@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/jln13x/tailwindcss-highlights#readme",
   "scripts": {
+    "prepare": "tsc",
     "build": "tsc",
     "publish": "npm run build && npm publish",
     "optimize": "svgo -f ./highlights -o ./highlights"
